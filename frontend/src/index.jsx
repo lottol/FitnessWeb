@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client';
 
 function component() {
   const element = document.createElement('div');
-  element.innerHTML = _.join(['Hello', 'world'], ' ');
+  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
 
   return element;
 }
