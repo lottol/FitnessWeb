@@ -20,12 +20,11 @@
   "scripts": {
     "build": "webpack",
     "test": "echo not yet implemented",
-    "dev": "webpack serve"
+    "dev": "webpack serve --open"
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "react-app"
     ]
   },
   "devDependencies": {
@@ -34,5 +33,12 @@
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.11.1"
-  }
+  },
+  "moduleFileExtensions": [
+      "css",
+      "scss",
+      "js",
+      "json",
+      "jsx"
+    ]
 }

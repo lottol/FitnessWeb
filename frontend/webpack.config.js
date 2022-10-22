@@ -3,14 +3,17 @@ const path = require('path');
 module.exports = {
   entry: './src/index.jsx',
   output: {
-    filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/'
   },
   module: {
     rules: [
-      { test: /\.js|\.jsx$/, use: 'babel-loader' },
-      { test: /\.css$/, use: [ 'style-loader', 'css-loader' ]}
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: 'babel-loader',
+        options: { presets: ['@babel/env', '@babel/preset-react'] },
+      }
     ]
   },
   devServer: {
@@ -18,7 +21,7 @@ module.exports = {
       directory: path.join(__dirname, 'dist'),
     },
     compress: true,
-    port: 9000,
+    port: 3000,
     historyApiFallback: true,
   }
 };
